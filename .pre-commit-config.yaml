@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
+        args: [--extra-keys=metadata]
+
+
+#This hook clears Jupyter notebook outputs before committing.
+#It keeps commits clean by excluding cell output changes that don't reflect code modifications.
