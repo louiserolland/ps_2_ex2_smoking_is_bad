@@ -1,10 +1,14 @@
 repos:
   - repo: https://github.com/kynan/nbstripout
-    rev: 0.7.1
+    rev: 0.8.1
     hooks:
       - id: nbstripout
-        args: [--extra-keys=metadata]
+        # optional: only if you want to strip these extra metadata keys
+        args: ['--extra-keys=metadata.kernelspec metadata.language_info.version']
+
 
 
 #This hook clears Jupyter notebook outputs before committing.
 #It keeps commits clean by excluding cell output changes that don't reflect code modifications.
+#This syntax (one quoted arg) is required because arguments with spaces must be passed as a single item; 
+#otherwise pre-commit feeds metadata as a standalone key, which nbstripout ignores as invalid.
