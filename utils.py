@@ -3,14 +3,14 @@ from pathlib import Path
 import pandas as pd
 
 
-def load_smoking_data(filename: str = "smoking.csv") -> pd.DataFrame:
+def load_smoking_data(filename: str = "smoking_data.csv") -> pd.DataFrame:
     """
     Load the smoking dataset from the 'data' folder.
 
     Parameters
     ----------
     filename : str
-        The name of the CSV file (default is 'smoking.csv').
+        The name of the CSV file (default is 'smoking_data.csv').
 
     Returns
     -------
